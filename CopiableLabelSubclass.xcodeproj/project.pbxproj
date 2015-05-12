@@ -13,6 +13,7 @@
 		882EE7D61B02636C00A2C622 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 882EE7D51B02636C00A2C622 /* Images.xcassets */; };
 		882EE7D91B02636C00A2C622 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 882EE7D71B02636C00A2C622 /* LaunchScreen.xib */; };
 		882EE7E51B02636D00A2C622 /* CopiableLabelSubclassTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882EE7E41B02636D00A2C622 /* CopiableLabelSubclassTests.swift */; };
+		882EE7EF1B02639B00A2C622 /* UICopiableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882EE7EE1B02639B00A2C622 /* UICopiableLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		882EE7DE1B02636D00A2C622 /* CopiableLabelSubclassTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CopiableLabelSubclassTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		882EE7E31B02636D00A2C622 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		882EE7E41B02636D00A2C622 /* CopiableLabelSubclassTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CopiableLabelSubclassTests.swift; sourceTree = "<group>"; };
+		882EE7EE1B02639B00A2C622 /* UICopiableLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICopiableLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 			children = (
 				882EE7CE1B02636C00A2C622 /* AppDelegate.swift */,
 				882EE7D01B02636C00A2C622 /* ViewController.swift */,
+				882EE7EE1B02639B00A2C622 /* UICopiableLabel.swift */,
 				882EE7D21B02636C00A2C622 /* Main.storyboard */,
 				882EE7D51B02636C00A2C622 /* Images.xcassets */,
 				882EE7D71B02636C00A2C622 /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882EE7EF1B02639B00A2C622 /* UICopiableLabel.swift in Sources */,
 				882EE7D11B02636C00A2C622 /* ViewController.swift in Sources */,
 				882EE7CF1B02636C00A2C622 /* AppDelegate.swift in Sources */,
 			);
