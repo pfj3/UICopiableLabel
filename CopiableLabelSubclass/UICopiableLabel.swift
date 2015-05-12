@@ -27,7 +27,7 @@ class UICopiableLabel: UILabel {
     func longPress(gestureRecognizer: UILongPressGestureRecognizer) {
         
         if gestureRecognizer.state != UIGestureRecognizerState.Began {
-            println("Continuous long press detected; ignoring")
+            println("Continuous long press detected. Ignoring")
             return
         }
         
