@@ -19,12 +19,17 @@ class UICopiableLabel: UILabel {
         
         self.userInteractionEnabled = true
         
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: Selector("longPress"))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
         self.addGestureRecognizer(longPressGesture)
         
     }
     
-    func longPress() {
+    func longPress(gestureRecognizer: UILongPressGestureRecognizer) {
+        
+        if gestureRecognizer.state != UIGestureRecognizerState.Began {
+            return
+        }
+        
         println("Long press detected")
         becomeFirstResponder()
         let theMenu = UIMenuController.sharedMenuController()
