@@ -159,6 +159,7 @@
 		882EE7C11B02636C00A2C622 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Peter Johnson";
 				TargetAttributes = {
@@ -413,6 +414,7 @@
 				882EE7EA1B02636D00A2C622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		882EE7EB1B02636D00A2C622 /* Build configuration list for PBXNativeTarget "CopiableLabelSubclassTests" */ = {
 			isa = XCConfigurationList;
@@ -421,6 +423,7 @@
 				882EE7ED1B02636D00A2C622 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -27,11 +27,11 @@ class UICopiableLabel: UILabel {
     func longPress(gestureRecognizer: UILongPressGestureRecognizer) {
         
         if gestureRecognizer.state != UIGestureRecognizerState.Began {
-            println("Continuous long press detected. Ignoring")
+            print("Continuous long press detected. Ignoring")
             return
         }
         
-        println("Long press detected")
+        print("Long press detected")
         becomeFirstResponder()
         let theMenu = UIMenuController.sharedMenuController()
         let copyItem = UIMenuItem(title: "Copy", action: Selector("copyToClipboard"))
@@ -41,7 +41,7 @@ class UICopiableLabel: UILabel {
     }
     
     func copyToClipboard() {
-        println("Copy called")
+        print("Copy called")
         UIPasteboard.generalPasteboard().string = self.text
     }
 
