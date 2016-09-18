@@ -9,39 +9,41 @@ import UIKit
 
 class UICopiableLabel: UILabel {
     
-    override func canBecomeFirstResponder() -> Bool {
+    override var canBecomeFirstResponder : Bool {
         return true
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        self.userInteractionEnabled = true
+        self.isUserInteractionEnabled = true
         
-        let longPressGesture = UILongPressGestureRecognizer(target: self, action: Selector("longPress:"))
+        let longPressGesture = UILongPressGestureRecognizer(target: self, action: longPressSelectorString)
         self.addGestureRecognizer(longPressGesture)
         
     }
     
-    func longPress(gestureRecognizer: UILongPressGestureRecognizer) {
+    let longPressSelectorString: Selector = #selector(UICopiableLabel.longPress(_:))
+    func longPress(_ gestureRecognizer: UILongPressGestureRecognizer) {
         
-        if gestureRecognizer.state != UIGestureRecognizerState.Began {
+        if gestureRecognizer.state != UIGestureRecognizerState.began {
             print("Continuous long press detected. Ignoring")
             return
         }
         
         print("Long press detected")
+        
         becomeFirstResponder()
-        let theMenu = UIMenuController.sharedMenuController()
-        let copyItem = UIMenuItem(title: "Copy", action: Selector("copyToClipboard"))
+        let theMenu = UIMenuController.shared
+        let copyItem = UIMenuItem(title: "Copy", action: copyToClipboardSelectorString)
         theMenu.menuItems = [copyItem]
-        theMenu.setTargetRect(self.bounds, inView: self)
+        theMenu.setTargetRect(self.bounds, in: self)
         theMenu.setMenuVisible(true, animated: true)
     }
     
+    let copyToClipboardSelectorString: Selector = #selector(UICopiableLabel.copyToClipboard)
     func copyToClipboard() {
         print("Copy called")
-        UIPasteboard.generalPasteboard().string = self.text
+        UIPasteboard.general.string = self.text
     }
-
 }
